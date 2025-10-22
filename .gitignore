@@ -1,0 +1,14 @@
+
+# VSCode
+.vscode/
+
+
+# Vim
+*.swp
+*~
+
+# Falls du jemals Node.js (z.B. für npm) verwendest
+node_modules/
+package-lock.json
+npm-debug.log
+yarn.lock

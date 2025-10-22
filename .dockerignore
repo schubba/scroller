@@ -1,0 +1,10 @@
+# Docker-spezifische Dateien
+Dockerfile
+.dockerignore
+
+# Git-Verzeichnis
+.git/
+.gitignore
+
+# Dokumentation
+README.md
