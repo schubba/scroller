@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Alfa Slab One'; /* So heißt die Schrift im CSS */
+    src: url('fonts/AlfaSlabOne-Regular.ttf') format('truetype'); /* Hier liegt die Datei */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* C64 Farbpalette (bleibt gleich) */
+:root {
+    --c64-black: #000000;
+    --c64-blue-transparent: rgba(53, 40, 121, 0.6); 
+    --font-size-vh: 35vh;
+    --offset-depth: 6px; 
+}
+
+/* Keyframes (bleibt gleich) */
+@keyframes rastabar-scroll-diag {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Body (bleibt gleich, 'font-family' funktioniert jetzt wegen @font-face) */
+body {
+    background-color: var(--c64-black);
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Alfa Slab One', serif;
+}
+
+/* Rest der Datei (ab .scroller-wrapper) bleibt exakt gleich */
+.scroller-wrapper {
+    white-space: nowrap; 
+    position: absolute;
+    top: 50%; 
+    will-change: transform; 
+}
+
+.scroller-wrapper h1 {
+    font-size: var(--font-size-vh); 
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: repeating-linear-gradient(
+        45deg, 
+        #0000AA 0%,    
+        #FFFFFF 6.25%, 
+        #0000AA 12.5%, 
+        #AAAA00 12.5%, 
+        #FFFFFF 18.75%,
+        #AAAA00 25%,   
+        #AA0000 25%,   
+        #FFFFFF 31.25%,
+        #AA0000 37.5%, 
+        #00AA00 37.5%, 
+        #FFFFFF 43.75%,
+        #00AA00 50%    
+    );
+    background-size: 800px 800px; 
+    animation: rastabar-scroll-diag 20s linear infinite; 
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: 
+        blur(1px)
+        drop-shadow(var(--offset-depth) var(--offset-depth) 0 var(--c64-blue-transparent));
+}
