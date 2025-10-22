@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scroller = document.querySelector('.scroller-wrapper');
     if (!scroller) return;
 
-    const scrollText = 'c64 like scroller    '; 
+    const scrollText = 'c64 like scroller                   '; 
     
     const scrollerTextElement = scroller.querySelector('h1');
     if (!scrollerTextElement) return;
