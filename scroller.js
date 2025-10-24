@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scroller = document.querySelector('.scroller-wrapper');
     if (!scroller) return;
 
-    const scrollText = 'c64 like scroller                   '; 
+    const scrollText = 'hello my friend             '; 
     
     const scrollerTextElement = scroller.querySelector('h1');
     if (!scrollerTextElement) return;
@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Breite des EINEN Elements messen
     const contentWidth = scrollerTextElement.scrollWidth; 
 
-    // --- Geschwindigkeit (bleibt 6) ---
-    const horizontalSpeed = 6;
+    // --- Geschwindigkeit ---
+    const horizontalSpeed = 9;
     
     let horizontalPosition = window.innerWidth; 
 
     // --- Vertikale Bounce-Konfiguration  ---
     const bounceAmplitude = 200; 
-    const bounceFrequency = 0.05; 
+    const bounceFrequency = 0.08; 
     let time = 0; 
 
     function scrollStep() {
